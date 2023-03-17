@@ -22,7 +22,7 @@ const gamecontainer = document.getElementById("game-info");
 gamecontainer.style.visibility = "hidden";
 
 const totalQuestions = 10;
-const incrementWidth = 100 / totalQuestions;      
+const incrementWidth = 1100 / totalQuestions;      
 
 let score = 0;
 let lives = 4;
@@ -90,10 +90,10 @@ function checkAnswer() {
         numTries = 0; // reset number of tries if answer is correct
 
         // Calculate the width of the progress bar
-        const width = incrementWidth * score;
+        const width = 110 * score;
 
         // Update the width of the progress bar
-        progressionElement.style.width = `${width}%`;
+        progressionElement.style.width = `${width}px`;
     } else {
         numTries++;
         if (numTries >= 3) {
