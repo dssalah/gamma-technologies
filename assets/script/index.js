@@ -146,7 +146,7 @@ playButtonImg.addEventListener("click", function () {
         gamecontainer.style.visibility = "visible";
 
         img2.remove();
-        playGame();
+       
 
 
 

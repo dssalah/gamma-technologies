@@ -21,8 +21,12 @@ gameContainer.style.visibility = "hidden";
 const gamecontainer = document.getElementById("game-info");
 gamecontainer.style.visibility = "hidden";
 
+const totalQuestions = 10;
+const incrementWidth = 100 / totalQuestions;      
+
 let score = 0;
 let lives = 4;
+let progression = 0;
 let cowCount = 0;
 let currentQuestionIndex = 0;
 let numTries = 0; // variable to keep track of number of tries
@@ -67,6 +71,7 @@ function checkAnswer() {
     const answerElement = document.getElementById('answer');
     const feedbackElement = document.getElementById('feedback');
     const scoreElement = document.getElementById('score');
+    const progressionElement = document.getElementById('progression')
     const cowCountElement = document.getElementById('cow-count');
     const livesElement = document.getElementById('lives');
     const successAudio = new Audio('assets/audio/success.mp3');
@@ -80,8 +85,15 @@ function checkAnswer() {
         feedbackElement.classList.add('success');
         successAudio.play();
         score++;
+        progression++;
         cowCount++;
         numTries = 0; // reset number of tries if answer is correct
+
+        // Calculate the width of the progress bar
+        const width = incrementWidth * score;
+
+        // Update the width of the progress bar
+        progressionElement.style.width = `${width}%`;
     } else {
         numTries++;
         if (numTries >= 3) {
@@ -110,7 +122,10 @@ function checkAnswer() {
     answerElement.value = questions[currentQuestionIndex].answer;
     feedbackElement.style.display = 'block';
     scoreElement.textContent = score;
+    progressionElement.textContent = progression;
+    console.log("progression");
     cowCountElement.textContent = '🐄'.repeat(cowCount);
+
 
 
     var livesText = '';
