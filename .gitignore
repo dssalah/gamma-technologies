@@ -1,0 +1,5 @@
+# Ignore large files
+*.mp4
+
+# Ignore files in the trash directory
+trash/
