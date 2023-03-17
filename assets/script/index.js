@@ -8,11 +8,11 @@ canvas.width = innerWidth;
 canvas.height = innerHeight;
 //Get access to the sprite sheet
 const answerbot = new Image();
-answerbot.src = "/images/Robots.png";
+answerbot.src = "assets/images/Robots.png";
 answerbot.onload = loadImages;
 //NEW CHARACTER (cow)
 const cow = new Image();
-cow.src = "/images/cow-char3.png";
+cow.src = "assets/images/cow-char3.png";
 cow.onload = loadImages;
 // 8 columns 1 row
 let cols = 8;
@@ -112,7 +112,7 @@ playButtonImg.addEventListener("click", function () {
 
     // Insert first image after the welcome image
     const img1 = document.createElement("img");
-    img1.src = "/images/3.png";
+    img1.src = "assets/images/3.png";
     img1.alt = "Image 3";
     img1.style.position = "relative"; // Set position to relative
     img1.style.zIndex = "6"; // Set z-index of image 1
@@ -125,7 +125,7 @@ playButtonImg.addEventListener("click", function () {
     // Delay for 1 second and then insert second image
     setTimeout(() => {
       const img2 = document.createElement("img");
-      img2.src = "/images/1.png";
+      img2.src = "assets/images/1.png";
       img2.alt = "Image 1";
       img2.style.position = "relative"; // Set position to relative
       img2.style.zIndex = "6"; // Set z-index of image 1

@@ -69,9 +69,9 @@ function checkAnswer() {
     const scoreElement = document.getElementById('score');
     const cowCountElement = document.getElementById('cow-count');
     const livesElement = document.getElementById('lives');
-    const successAudio = new Audio('audio/success.mp3');
-    const tryagainAudio = new Audio('audio/try-again2.mp3');
-    const failAudio = new Audio('audio/fail.mp3');
+    const successAudio = new Audio('../audio/success.mp3');
+    const tryagainAudio = new Audio('../audio/try-again2.mp3');
+    const failAudio = new Audio('../audio/fail.mp3');
 
     const userAnswer = answerElement.value.trim();
 

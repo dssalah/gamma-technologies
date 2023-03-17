@@ -31,7 +31,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/images/blackbackground.jpg");
+    background-image: url("../images/blackbackground.jpg");
     background-size: cover;
     z-index: -100;
   }
@@ -43,7 +43,7 @@
     left: 50px;
     width: 80%;
     height: 60%;
-    background-image: url("/images/night-farm.jpeg");
+    background-image: url("../images/night-farm.jpeg");
     background-size: contain;
     background-repeat: no-repeat;
     z-index: -50;
@@ -70,7 +70,7 @@
     top: 56%;
     left: 44%;
     transform: translate(-50%, -50%);
-    background-image: url('/images/play-button.png');
+    background-image: url('../images/play-button.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
