@@ -6,6 +6,14 @@
     
   }
 
+  #help {
+    z-index: 50;
+    color: wheat;
+    font-size: 12px;
+    position:relative;
+    top: 616px;
+    left: 573px;
+  }
 
   
   body {
