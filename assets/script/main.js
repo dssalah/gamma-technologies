@@ -122,7 +122,7 @@ function checkAnswer() {
     answerElement.value = questions[currentQuestionIndex].answer;
     feedbackElement.style.display = 'block';
     scoreElement.textContent = score;
-    progressionElement.textContent = progression;
+    progressionElement.textContent = '🐄'.repeat(cowCount);;
     console.log("progression");
     cowCountElement.textContent = '🐄'.repeat(cowCount);
 
