@@ -3,3 +3,6 @@
 
 # Ignore files in the trash directory
 trash/
+
+# ignore etc etc
+*.DS_Store
