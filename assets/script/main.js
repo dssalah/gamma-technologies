@@ -27,6 +27,7 @@ const incrementWidth = 1100 / totalQuestions;
 let score = 0;
 let lives = 4;
 let progression = 0;
+let cowIcon = "";
 let cowCount = 0;
 let currentQuestionIndex = 0;
 let numTries = 0; // variable to keep track of number of tries
@@ -72,6 +73,7 @@ function checkAnswer() {
     const feedbackElement = document.getElementById('feedback');
     const scoreElement = document.getElementById('score');
     const progressionElement = document.getElementById('progression')
+    const cowIconElement = document.getElementById('cowIcon');
     const cowCountElement = document.getElementById('cow-count');
     const livesElement = document.getElementById('lives');
     const successAudio = new Audio('assets/audio/success.mp3');

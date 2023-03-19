@@ -55,7 +55,20 @@
     top: -60px;
     left: 50px;
     font-family: 'Courier New', Courier, monospace;
+    color: rgba(0, 0, 0, 0);
   }
+  .cowIcon {
+    position: relative;
+    display: block;
+    width: 0px;
+    min-height: 25px;
+    top: -105px;
+    left: 50px;
+    font-family: 'Courier New', Courier, monospace;  
+ 
+  }
+  
+
 
   .neon-border {
     box-shadow: 0 0 20px #52017b, 0 0 40px #52017b, 0 0 60px #52017b, 0 0 80px #a6429d, 0 0 100px #a6429d, 0 0 150px #d2a4c8, 0 0 200px #ffffff, 0 0 300px #ffffff;
@@ -528,7 +541,7 @@
   .footer-text {
     position: relative;
     text-align: center;
-    top: -35px;
+    top: -60px;
     left: -51px;
     
   }
