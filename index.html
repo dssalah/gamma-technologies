@@ -54,7 +54,7 @@
             <h2 id="feedback"></h2>
           </div>
           <div id="score-container">
-            <h2 id="score">SCORE: <span>0</span></h2>
+            <h2 id="score">SCORE: <span>--/10</span></h2>
           </div>
         </div>
         <div id="story">
@@ -66,59 +66,7 @@
       <script src="assets/script/index.js"></script>
       <script src="assets/script/main.js"></script>
       
-      <script>
-  
-        const navSlide = () => {
-          const burger = document.querySelector('.burger');
-          const nav = document.querySelector('.nav-links');
-          const navLinks = document.querySelectorAll('.nav-links li');
-  
-          burger.addEventListener('click', () => {
-            nav.classList.toggle('nav-active');
-            burger.classList.toggle('toggle');
-  
-            navLinks.forEach((link, index) => {
-              if (link.style.animation) {
-                link.style.animation = '';
-              } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
-              }
-            });
-          });
-        };
-  
-        navSlide();
-  
-        // Get the cow count and lives elements
-    var cowCountElement = document.getElementById('cow-count');
-    var livesElement = document.getElementById('lives');
-  
-    // Set the initial cow count and lives values
-    var cowCount = 0;
-    var lives = 3;
-  
-    // Update the cow count and lives information
-    function updateGameInfo() {
-      cowCountElement.textContent = cowCount;
-      livesElement.innerHTML = '';
-      for (var i = 0; i < lives; i++) {
-        livesElement.innerHTML += '<i class="fas fa-heart"></i>';
-      }
-    }
-  
-    // Call the updateGameInfo function to display the initial values
-    updateGameInfo();
-  
-    // Update the cow count when a cow is saved
-    cowCount++;
-    updateGameInfo();
-  
-    // Reduce a life when a wrong answer is submitted
-    lives--;
-    updateGameInfo();
-    
-      </script>
-  
+
   
     
    
@@ -126,6 +74,7 @@
 <footer>
     <span id="progression">Progress Bar</span>
     <span class="cowIcon">Progression</span>
+    
     <div class="footer-container">
       <div class="footer-text">
         <p> &copy; Moo Light  Gamma Technologies All Rights Reserved 2023 ~ Present</p>
@@ -139,5 +88,3 @@
   
 </html>
 
-
-  

@@ -161,4 +161,4 @@ playButtonImg.addEventListener("click", function () {
 
 
 
-document.getElementById("my-canvas").classList.add("neon-border");
+document.getElementById("canvas").classList.add("neon-border");

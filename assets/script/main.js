@@ -93,9 +93,13 @@ function checkAnswer() {
 
         // Calculate the width of the progress bar
         const width = 110 * score;
-
+        // calculate a new hue based on the score
+        const hue = score * 100; 
         // Update the width of the progress bar
         progressionElement.style.width = `${width}px`;
+         // set the background color to the new hue
+         progressionElement.style.backgroundColor = `hsl(${hue}, 70%, 50%)`; 
+        
     } else {
         numTries++;
         if (numTries >= 3) {
@@ -123,7 +127,7 @@ function checkAnswer() {
     // Show feedback and update score
     answerElement.value = questions[currentQuestionIndex].answer;
     feedbackElement.style.display = 'block';
-    scoreElement.textContent = score;
+    scoreElement.textContent = score + "/10";
     progressionElement.textContent = '🐄'.repeat(cowCount);;
     console.log("progression");
     cowCountElement.textContent = '🐄'.repeat(cowCount);
@@ -230,3 +234,4 @@ setTimeout(() => {
  
  
  */
+
