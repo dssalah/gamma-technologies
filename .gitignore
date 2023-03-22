@@ -6,3 +6,5 @@ trash/
 
 # ignore etc etc
 *.DS_Store
+
+node_modules/
