@@ -366,6 +366,14 @@
   .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
   }
+
+  #timer{
+   
+    position: relative;
+    top: -180px;
+    left: 570px;
+    font-size: 36px;
+  }
   
   .container {
   display: grid;

@@ -20,7 +20,10 @@
 
     </div>
 
-    <img id="play-button" src="assets/images/play-button.png">
+    <button onclick="startTimer()">
+      <img id="play-button" src="assets/images/play-button.png">
+    </button>
+    
     <nav>
         <div class="nav-container">
           <a href="/" class="logo">Math Quiz Game‎ ‎ ‎ </a> <br>
@@ -29,7 +32,8 @@
        
         </div>
       </nav>    
-  
+      <div id="timer">00:00:00</div>
+
       <div id="game-info">
         <p>Cow Count: <span id="cow-count">0</span></p>
         <p>Lives: <span id="lives">❤️ ❤️ ❤️<i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i></span></p>
