@@ -22,7 +22,7 @@ const gamecontainer = document.getElementById("game-info");
 gamecontainer.style.visibility = "hidden";
 
 const totalQuestions = 10;
-const incrementWidth = 1100 / totalQuestions;      
+const incrementWidth = 1100 / totalQuestions;
 
 let score = 0;
 let lives = 4;
@@ -94,12 +94,12 @@ function checkAnswer() {
         // Calculate the width of the progress bar
         const width = 110 * score;
         // calculate a new hue based on the score
-        const hue = score * 100; 
+        const hue = score * 100;
         // Update the width of the progress bar
         progressionElement.style.width = `${width}px`;
-         // set the background color to the new hue
-         progressionElement.style.backgroundColor = `hsl(${hue}, 70%, 50%)`; 
-        
+        // set the background color to the new hue
+        progressionElement.style.backgroundColor = `hsl(${hue}, 70%, 50%)`;
+
     } else {
         numTries++;
         if (numTries >= 3) {
@@ -129,7 +129,6 @@ function checkAnswer() {
     feedbackElement.style.display = 'block';
     scoreElement.textContent = "SCORE:" + score + "/10";
     progressionElement.textContent = '🐄'.repeat(cowCount);;
-    console.log("progression");
     cowCountElement.textContent = '🐄'.repeat(cowCount);
 
 
@@ -138,24 +137,32 @@ function checkAnswer() {
     for (var i = 0; i < lives; i++) {
         livesText += '❤️ ';
     }
-    livesElement.innerHTML = livesText;
+    livesElement.textcontent = livesText;
+    console.log(livesText);
 
-
-    // Go to the next question or end the game
+    
     currentQuestionIndex++;
     if (currentQuestionIndex === questions.length) {
         endGame();
     }
     if (answerElement.value === questions[currentQuestionIndex - 1].answer) {
-        // Show the correct answer
-        answerElement.value = questions[currentQuestionIndex - 1].answer;
-        // Wait for some time before clearing the answer element
+
+        // correct answer lingers 
+        answerElement.value = "Correct: " + questions[currentQuestionIndex - 1].answer;
+        // Waits for some time before clearing the answer element
         setTimeout(function () {
             answerElement.value = '';
             displayQuestion();
         }, 5000); // Wait for 2 seconds before clearing the answer element
-    } else {
-        displayQuestion();
+    } else if  (answerElement.value != questions[currentQuestionIndex - 1].answer) {
+    
+        answerElement.value = questions[currentQuestionIndex - 1].answer;
+        // Waits for some time before clearing the answer element
+        console.log(answerElement.value);
+        setTimeout(function () {
+            answerElement.value = '';
+            displayQuestion();
+        }, 5000); // Waits for 2 seconds before clearing the answer element
     }
 
 
@@ -235,19 +242,18 @@ setTimeout(() => {
  
  */
 
- function startTimer() {
+function startTimer() {
     var startTime = Date.now();
-    setInterval(function() {
-      var elapsedTime = Date.now() - startTime;
-      var hours = Math.floor(elapsedTime / (1000 * 60 * 60));
-      var minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
-      var timerElement = document.getElementById('timer');
-      timerElement.textContent = padZero(hours) + ':' + padZero(minutes) + ':' + padZero(seconds);
+    setInterval(function () {
+        var elapsedTime = Date.now() - startTime;
+        var hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+        var minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
+        var timerElement = document.getElementById('timer');
+        timerElement.textContent = padZero(hours) + ':' + padZero(minutes) + ':' + padZero(seconds);
     }, 1000);
-  }
-  
-  function padZero(num) {
+}
+
+function padZero(num) {
     return (num < 10 ? '0' : '') + num;
-  }
-  
+}
