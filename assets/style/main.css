@@ -22,7 +22,21 @@
     position: relative;
     overflow: hidden;
   }
+/* Styles for smaller screens */
+@media screen and (max-width: 600px) {
+  .game-container {
+    padding: 10px;
+  }
 
+ 
+}
+
+/* Styles for larger screens */
+@media screen and (min-width: 1200px) {
+  .game-container {
+    max-width: 1200px;
+  }
+}
   #backgroundblack {
     position: fixed;
     top: 0;
