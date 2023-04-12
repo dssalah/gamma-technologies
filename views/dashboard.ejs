@@ -1,15 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-    <title>Document</title>
-</head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/css/stlye.css">
+        <script src="/js/jquery.min.js"></script>
+        <title>Math Quiz Game</title>
+    </head>
+
 <body>
-    <a href="/users/logout">logout</a>
-    <h1>Hello <%= user.charAt(0).toUpperCase() + user.slice(1) %></h1>
+
+
+    <div id="backgroundblack">
+        <h2 id="help">(Play @ fullscreen & Refresh window if characters aren't seen)
+    </div>
+    </div>
+
+    <canvas id="canvas" class="neon-border"></canvas>
+    <div id="message">
+        <img src="/assets/images/2.png" alt="">
+
+
+    </div>
+
+    <button onclick="startTimer()">
+        <img id="play-button" src="/assets/images/play-button.png">
+    </button>
+
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo" style="text-decoration: underline;">Moo Light‎ ‎ ‎ </a> <br>
+            <a href="https://youtu.be/NSnhNCLSwu4" class="logo" style="text-decoration: underline;">‎ ‎ ‎ ‎ Demo</a>
+
+
+        </div>
+    </nav>
+    <div id="timer">00:00:00</div>
+
+    <div id="game-info">
+        <a href="/users/logout">logout</a>
+        <p>Hello <%= user.charAt(0).toUpperCase() + user.slice(1) %>
+        </p>
+        <p>Cow Count: <span id="cow-count">0</span></p>
+        <p>Lives: <span id="lives">❤️ ❤️ ❤️<i class="fas fa-heart"></i><i class="fas fa-heart"></i><i
+                    class="fas fa-heart"></i></span></p>
+    </div>
+
+    <div class="container">
+
+        <div class="background"></div>
+        <div class="background"></div>
+        <div id="game">
+            <div id="question-container">
+                <h2 id="question"></h2>
+                <input type="text" id="answer" autocomplete="off" autofocus
+                    onkeydown="if (event.keyCode == 13) checkAnswer()">
+                <button id="submit-button" onclick="checkAnswer()">Submit</button>
+            </div>
+            <div id="feedback-container">
+                <p id="feedback"></p>
+                <button id="next-button" onclick="nextQuestion()">Next Question</button>
+            </div>
+            <div id="feedback-container">
+
+                <h2 id="feedback"></h2>
+            </div>
+            <div id="score-container">
+                <h2 id="score">SCORE: <span>--/10</span></h2>
+            </div>
+        </div>
+        <div id="story">
+
+        </div>
+        <p id="story-text"></p>
+    </div>
+    </div>
+    <script src="/scripts/index.js"></script>
+    <script src="/scripts/math.js"></script>
+    <script src="/js/jquery.min.js"></script>
+
+    <footer>
+        <span id="progression">Progress Bar</span>
+        <span class="cowIcon">Progress</span>
+
+        <div class="footer-container">
+            <div class="footer-text">
+                <p> &copy; Moo Light Gamma Technologies All Rights Reserved 2023 ~ Present</p>
+
+            </div>
+            <div class="footer-image">
+                <img src="/assets/images/Gamma_Logo.png" alt="Moo Light logo">
+            </div>
+        </div>
+    </footer>
 
 </body>
+
 </html>
